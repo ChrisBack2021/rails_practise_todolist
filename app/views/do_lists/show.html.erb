@@ -1,0 +1,7 @@
+<h1> <%= @dolist.chore %> </h1>
+<h3>by <%= @dolist.owner.full_name %></h3>
+
+<%= link_to 'Edit', edit_do_list_path(@dolist) %>
+<%= button_to 'Delete', @dolist, class: 'btn btn-danger', method: :delete, form: { data: { turbo_confirm: "Are you sure you want to delete '#{@dolist.chore}' ?" } }  %> 
+
+<%= link_to 'Return', do_lists_path %>

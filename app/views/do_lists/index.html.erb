@@ -1,0 +1,8 @@
+<h1>
+  To Do List
+  <p><%= link_to('Enter a new chore', new_do_list_path) %></p>
+</h1>
+
+<% @dolists.each do |list| %>
+<p><%= link_to list.chore, list %> by <%= list.owner.full_name %></p>
+<% end %>

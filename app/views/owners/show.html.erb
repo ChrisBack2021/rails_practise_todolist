@@ -1,0 +1,6 @@
+<h1> <%= @owners.full_name %> </h1>
+<ul>
+<h3><% @owners.do_lists.each do |list| %></h3>
+<li><%= list.chorelist %></li>
+<% end %>
+</ul>
